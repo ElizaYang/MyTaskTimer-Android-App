@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.android.csc472.mytasktime.Activities.TimerActivity">
+
+
+    <TextView
+        android:id="@+id/labelTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:text="Task Timer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskNameTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelTimer"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorAccentRed"
+        android:text="Textview"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTimer" />
+
+    <TextView
+        android:id="@+id/taskDetailTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/taskNameTimer"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="48dp"
+        android:text="Details:"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/round_progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/taskNameTimer"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameTimer" />
+
+    <TextView
+        android:id="@+id/taskDetailTextTimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/taskDetailTimer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="xxx"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/taskDetailTimer"
+        app:layout_constraintEnd_toStartOf="@+id/tableRow2"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toEndOf="@+id/taskDetailTimer" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/taskDetailTimer"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/taskDetailTimer"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/editButtonTimer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:drawable/ic_menu_edit" />
+
+        <Button
+            android:id="@+id/deleteButtonTimer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:drawable/ic_delete" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskDetailTimer"
+        android:layout_centerHorizontal="true"
+        android:text="00:00:00"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/round_progress_bar"
+        app:layout_constraintEnd_toStartOf="@+id/round_progress_bar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/round_progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/round_progress_bar" />
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:id="@+id/tableTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerValue"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+    </android.support.v7.widget.ContentFrameLayout>
+
+
+    <ImageView
+        android:id="@+id/trophy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="0"
+        android:src="@drawable/ic_trophy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/doneHoursTextTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round_progress_bar" />
+
+
+    <TextView
+        android:id="@+id/doneHoursTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Done Hours"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/doneHoursTextTimer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/doneHoursTextTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="22222"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/doneHoursTimer" />
+
+
+    <TextView
+        android:id="@+id/targetHoursTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Target Hours"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/hoursTextTimer"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/hoursTextTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="11111"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/round_progress_bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        app:cpb_background_progressbar_color="@color/colorAccentYellow"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progressbar_color="@color/colorAccentRed"
+        app:cpb_progressbar_width="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/progressTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Progress"
+        android:textColor="@color/colorAccentRed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/timerValue"
+        app:layout_constraintEnd_toStartOf="@+id/round_progress_bar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/round_progress_bar" />
+
+    <ImageButton
+        android:id="@+id/forwardButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/round_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round_progress_bar" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:tint="@color/colorAccentYellow"
+        app:layout_constraintBottom_toBottomOf="@+id/round_progress_bar"
+        app:layout_constraintEnd_toStartOf="@+id/timerValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/timerValue"
+        app:layout_constraintTop_toBottomOf="@+id/timerValue" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:tint="@color/colorAccentRed"
+        app:layout_constraintBottom_toBottomOf="@+id/stopButton"
+        app:layout_constraintEnd_toStartOf="@+id/round_progress_bar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/round_progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/timerValue" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/round_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round_progress_bar"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <TextView
+        android:id="@+id/progressNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccentRed"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/trophy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sub30mins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-30 mins"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/backButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <TextView
+        android:id="@+id/add30mins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+30 mins"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/forwardButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/forwardButton"
+        app:layout_constraintTop_toBottomOf="@+id/forwardButton" />
+
+
+</android.support.constraint.ConstraintLayout>

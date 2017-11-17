@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyTaskTime</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_task">Add Your First Task</string>
+    <string name="new_task">New Task</string>
+    <string name="task_label">Task Name</string>
+    <string name="hint_task">Enter Task Name</string>
+    <!--<string name="pick_label">Task Label</string>-->
+    <string name="target_hour">Target Hours</string>
+    <string name="TaskDetail_label">Task Detail</string>
+    <string name="hint_taskDetail">Enter Task Details</string>
+    <!--<string name="target_hours">Target Hours</string>-->
+    <!--<string name="count_down">Count Down</string>-->
+    <string name="delete_task">Delete Task</string>
+    <string name="reset_task">Reset Task</string>
+    <string name="save_task">Save</string>
+    <string name="cancel_task">Cancel</string>
+
+</resources>

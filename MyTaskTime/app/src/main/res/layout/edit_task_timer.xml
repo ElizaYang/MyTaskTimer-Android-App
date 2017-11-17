@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/new_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/new_task"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/taskName_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/task_label"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_task" />
+
+
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_task"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="24dp"
+                android:hint="@string/hint_task"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/taskName_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/taskName_label" />
+
+            <TextView
+                android:id="@+id/add_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/target_hour"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/taskName_label"
+                app:layout_constraintTop_toBottomOf="@+id/taskName_label" />
+
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorAccentRed"
+                android:text="@string/save_task"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/hint_taskDetail"
+                app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccentRedLight"
+                android:text="@string/cancel_task"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/saveButton"
+                app:layout_constraintStart_toStartOf="@+id/hint_taskDetail" />
+
+            <EditText
+                android:id="@+id/hourTarget"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/task_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/task_name"
+                app:layout_constraintTop_toBottomOf="@+id/task_name" />
+
+            <EditText
+                android:id="@+id/hint_taskDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="top|start"
+                android:hint="@string/hint_taskDetail"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+                app:layout_constraintEnd_toEndOf="@+id/hourTarget"
+                app:layout_constraintStart_toStartOf="@+id/add_hour"
+                app:layout_constraintTop_toBottomOf="@+id/task_detail" />
+
+            <TextView
+                android:id="@+id/task_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/TaskDetail_label"
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/hourTarget"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/add_hour"
+                app:layout_constraintTop_toBottomOf="@+id/doneTime" />
+
+            <TextView
+                android:id="@+id/doneTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Done Hours"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/add_hour"
+                app:layout_constraintTop_toBottomOf="@+id/add_hour" />
+
+            <EditText
+                android:id="@+id/hour_input"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="00"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/doneTime"
+                app:layout_constraintStart_toStartOf="@+id/hourTarget" />
+
+            <EditText
+                android:id="@+id/min_input"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:hint="00"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/doneTime"
+                app:layout_constraintStart_toEndOf="@+id/textH" />
+
+            <EditText
+                android:id="@+id/sec_input"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="00"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/doneTime"
+                app:layout_constraintEnd_toEndOf="@+id/hourTarget" />
+
+            <TextView
+                android:id="@+id/textH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=":"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/doneTime"
+                app:layout_constraintStart_toEndOf="@+id/hour_input" />
+
+            <TextView
+                android:id="@+id/textM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=":"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/doneTime"
+                app:layout_constraintEnd_toStartOf="@+id/sec_input"
+                app:layout_constraintStart_toEndOf="@+id/min_input" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

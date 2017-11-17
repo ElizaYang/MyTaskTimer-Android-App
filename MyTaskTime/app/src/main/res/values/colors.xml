@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F1635F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccentRed">#F1635F</color>
+    <color name="colorAccentRedLight">#f58481</color>
+    <color name="colorAccentYellow">#FFC652</color>
+    <color name="bg_row_background">#fa315b</color>
+</resources>
