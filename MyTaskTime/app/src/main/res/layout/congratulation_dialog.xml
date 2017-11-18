@@ -45,7 +45,7 @@
                 android:id="@+id/dimissButton"
                 android:layout_centerHorizontal="true"
                 android:background="@color/colorAccentRed"
-                android:text="Dimiss"
+                android:text="Dismiss"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp"
                 android:layout_below="@+id/trophy"
