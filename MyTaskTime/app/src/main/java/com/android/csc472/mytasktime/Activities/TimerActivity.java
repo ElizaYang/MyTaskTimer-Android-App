@@ -318,9 +318,9 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     private Runnable updateTimerThread = new Runnable() {
-
+        // runnable is an interface, if we want an instance be execute by threads
         public void run() {
-
+            // run(): create new threads
             timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
             updatedTime = timeSwapBuff + timeInMilliseconds;
             //find original task time in db, add timeInMilliseconds to  timeSwapBuff
